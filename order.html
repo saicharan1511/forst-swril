@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Now | Frost&Swirl</title>
+  <link rel="stylesheet" href="order.css">
+  <script src="order.js" defer></script>
+</head>
+<body>
+  <!-- These controls stay at the physical top-right in both directions. -->
+  <div class="page-controls" aria-label="Page preferences">
+    <button id="theme-toggle" type="button"
+      aria-label="Switch to dark mode">
+      <svg id="theme-icon" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z"/>
+      </svg>
+    </button>
+
+    <button id="direction-toggle" type="button"
+      aria-label="Switch to right-to-left layout">
+      RTL
+    </button>
+  </div>
+
+  <main class="order-layout">
+    <section class="intro" aria-labelledby="order-title">
+      <!-- Both logo and brand name redirect to the homepage. -->
+      <a class="brand" href="index.html" aria-label="Frost&Swirl home">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M9 32h27l-5 24H14L9 32Z"
+            stroke="currentColor" stroke-width="3"/>
+          <path
+            d="M12 29c-6-8 5-13 10-13-4-5 1-9 5-11-1 8 10 10 7 17 7 1 7 7 2 10"
+            stroke="currentColor" stroke-width="3"
+            stroke-linecap="round"/>
+          <path
+            d="M40 28h17l-3 28H43l-3-28Z M49 27l3-16h8 M39 34h19"
+            class="logo-secondary" stroke-width="3"
+            stroke-linecap="round"/>
+        </svg>
+
+        <span class="brand-copy">
+          <span>Frost<span class="teal">&amp;Swirl</span></span>
+          <small>Scoops of Joy. Swirls of Happiness.</small>
+        </span>
+      </a>
+
+      <div class="intro-copy">
+        <span class="eyebrow">YOUR SWEET MOMENT STARTS HERE</span>
+        <h1 id="order-title">
+          A little scoop.<br>
+          <span>A lot of happiness.</span>
+        </h1>
+        <p>
+          Pick your favorite treat, choose your quantity,
+          and make your day a little sweeter.
+        </p>
+      </div>
+
+      <div class="dessert-art" aria-hidden="true">
+        <div class="art-ring"></div>
+        <svg viewBox="0 0 320 320" fill="none">
+          <ellipse cx="160" cy="285" rx="83" ry="12"
+            fill="currentColor" opacity=".1"/>
+          <path d="M107 160h106l-53 118-53-118Z"
+            fill="var(--card)" stroke="var(--secondary)"
+            stroke-width="5"/>
+          <path d="m120 183 61 51m-48-22 35 29m32-58-61 51m48-22-35 29"
+            stroke="var(--secondary)" stroke-width="4"
+            stroke-linecap="round" opacity=".45"/>
+          <circle cx="126" cy="138" r="43"
+            fill="var(--card)" stroke="var(--primary)"
+            stroke-width="5"/>
+          <circle cx="194" cy="138" r="43"
+            fill="var(--card)" stroke="var(--primary)"
+            stroke-width="5"/>
+          <circle cx="160" cy="92" r="46"
+            fill="var(--card)" stroke="var(--primary)"
+            stroke-width="5"/>
+          <path d="m140 77 9 5m27-15-5 10m-11 32 10-4m-55 31 9 5m71-2 8-5"
+            stroke="var(--secondary)" stroke-width="5"
+            stroke-linecap="round"/>
+        </svg>
+        <span class="art-label">Made for sweet moments</span>
+      </div>
+
+      <a class="back-link" href="index.html">
+        <span aria-hidden="true">←</span> Back to Home
+      </a>
+    </section>
+
+    <section class="order-card" aria-labelledby="form-title">
+      <span class="eyebrow">BUILD YOUR ORDER</span>
+      <h2 id="form-title">What are you craving?</h2>
+      <p class="muted">Choose your treat and pickup details.</p>
+
+      <form id="order-form">
+        <div class="field">
+          <label for="category">Dessert category</label>
+          <select id="category" name="category">
+            <option value="icecream">Ice Cream</option>
+            <option value="combos">Milkshake &amp; Waffle Combos</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="product">Choose your favorite</label>
+          <select id="product" name="product"></select>
+        </div>
+
+        <div class="quantity-row">
+          <label for="quantity">Quantity</label>
+          <div class="quantity-control">
+            <button id="decrease" type="button"
+              aria-label="Decrease quantity">−</button>
+            <input id="quantity" name="quantity" type="number"
+              min="1" max="20" step="1" value="1" required>
+            <button id="increase" type="button"
+              aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="customer-name">Full name</label>
+          <input id="customer-name" name="name" type="text"
+            placeholder="Enter your full name"
+            autocomplete="name" maxlength="100" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel"
+            placeholder="Enter your phone number"
+            autocomplete="tel" maxlength="25" required>
+        </div>
+
+        <div class="field">
+          <label for="pickup">Preferred pickup time</label>
+          <input id="pickup" name="pickup"
+            type="datetime-local" required>
+        </div>
+
+        <div class="field">
+          <label for="notes">
+            Order notes <span class="muted">(optional)</span>
+          </label>
+          <textarea id="notes" name="notes" rows="2"
+            maxlength="500"
+            placeholder="Any preferences or special requests?"></textarea>
+        </div>
+
+        <div class="order-summary" aria-live="polite" aria-atomic="true">
+          <div>
+            <span id="summary-product">Your dessert</span>
+            <small id="summary-quantity">1 item</small>
+          </div>
+          <strong id="total">₹99</strong>
+        </div>
+
+        <p class="sample-note">
+          Sample menu and prices. This preview does not send an order
+          or collect payment.
+        </p>
+
+        <button class="submit-button" type="submit">
+          Review My Order <span aria-hidden="true">→</span>
+        </button>
+
+        <noscript>
+          Enable JavaScript to select desserts and preview your order.
+        </noscript>
+      </form>
+    </section>
+  </main>
+
+  <dialog id="review-dialog" aria-labelledby="review-title">
+    <div class="dialog-content">
+      <span class="eyebrow">YOUR SWEET SELECTION</span>
+      <h2 id="review-title">Order preview</h2>
+      <dl id="review-details"></dl>
+      <p class="muted">
+        Your order has not been sent. A store ordering service
+        is required to confirm pickup and payment.
+      </p>
+      <button id="close-review" class="submit-button" type="button">
+        Continue Editing
+      </button>
+    </div>
+  </dialog>
+</body>
+</html>

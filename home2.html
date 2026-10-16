@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frost&Swirl | Home 2 — Premium</title>
+  <meta name="description"
+    content="Explore Frost&Swirl ice cream flavors, milkshake and waffle combos, seasonal treats, and party order enquiries.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M9%2032h27l-5%2024H14L9%2032Z%22%20stroke%3D%22%23D93675%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M12%2029c-6-8%205-13%2010-13-4-5%201-9%205-11-1%208%2010%2010%207%2017%207%201%207%207%202%2010%22%20stroke%3D%22%23D93675%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M40%2028h17l-3%2028H43l-3-28Z%20M49%2027l3-16h8%20M39%2034h19%22%20stroke%3D%22%23087F83%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="home2.css">
+  <script src="home2.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Frost&Swirl home">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M9 32h27l-5 24H14L9 32Z" stroke="currentColor" stroke-width="3" />
+          <path d="M12 29c-6-8 5-13 10-13-4-5 1-9 5-11-1 8 10 10 7 17 7 1 7 7 2 10" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" />
+          <path d="M40 28h17l-3 28H43l-3-28Z M49 27l3-16h8 M39 34h19" stroke="#087F83" stroke-width="3"
+            stroke-linecap="round" />
+        </svg>
+        <span>
+          Frost<span class="teal">&amp;Swirl</span>
+          <small>Scoops of Joy. Swirls of Happiness.</small>
+        </span>
+      </a>
+      <button id="mobile-toggle" class="icon-button mobile-toggle" type="button" aria-label="Open navigation"
+        aria-expanded="false" aria-controls="navigation">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+      <nav id="navigation" aria-label="Main navigation">
+        <div class="home-dropdown">
+          <button id="home-toggle" class="nav-link active" type="button" aria-expanded="false"
+            aria-controls="home-options">
+            Home
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div id="home-options" class="dropdown" hidden>
+            <a href="index.html">
+              Home 1 — Classic
+            </a>
+            <a class="future" href="home2.html" aria-current="page">
+              Home 2 — Premium
+              <small>PREMIUM</small>
+              <em>Signature dessert experience</em>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="specials.html">Specials</a>
+        <a href="partyorders.html">Party Orders</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <button id="direction-toggle" class="icon-button" type="button" aria-label="Switch to right-to-left layout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 6H8m0 0 4-4M8 6l4 4M20 13H10m10 4H10m10 4H10" />
+          </svg>
+        </button>
+        <!-- ONLY ONE HEADER CTA -->
+        <a class="button primary login" href="order.html">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <!-- 1. CINEMATIC HERO -->
+    <section class="premium-hero" aria-labelledby="hero-title"><img class="premium-backdrop"
+        src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+        alt="Ice cream cones photographed against a pastel background" loading="eager" fetchpriority="high" width="1400"
+        height="1050">
+      <div class="premium-overlay"></div>
+      <div class="container premium-hero-content"><span class="premium-kicker">FROST&amp;SWIRL • THE PREMIUM
+          EXPERIENCE</span>
+        <h1 id="hero-title">A little indulgence.<br><em>A whole lot of joy.</em></h1>
+        <p>Slow down. Savor the swirl. Discover signature scoops, dreamy shakes and warm waffles made for your sweetest
+          escape.</p>
+        <div class="actions"><a class="button primary" href="#signature">Find Your Favorite <i
+              data-lucide="arrow-right"></i></a><a class="button hero-outline" href="#party">Celebrate With Us</a></div>
+        <div class="hero-caption"><span>YOUR SWEET ESCAPE</span></div>
+      </div>
+    </section>
+    <!-- 2. SIGNATURE SCOOPS -->
+    <section id="signature" class="section container">
+      <div class="premium-heading"><span class="eyebrow">THE SCOOP EDIT</span>
+        <h2>Small scoops. Big personalities.</h2>
+        <p>Choose your mood, then meet your next favorite flavor.</p>
+      </div>
+      <div class="premium-filters" role="group" aria-label="Filter sample flavors"><button class="filter active"
+          data-filter="all" aria-pressed="true">All flavors</button><button class="filter" data-filter="classic"
+          aria-pressed="false">Comfort classics</button><button class="filter" data-filter="fruit"
+          aria-pressed="false">Fruity favorites</button></div>
+      <div class="premium-products">
+        <article class="premium-product" data-category="classic"><img class=""
+            src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+            alt="Illustrative ice cream dessert for Midnight Cocoa" loading="lazy" width="1400" height="1050">
+          <div><span class="product-number">01</span>
+            <h3>Midnight Cocoa</h3>
+            <p>Deep chocolate, soft fudge, a satisfyingly rich finish.</p><strong class="price">Sample price
+              ₹149</strong><a href="menu.html" class="product-link">Explore the menu ↗</a>
+          </div>
+        </article>
+        <article class="premium-product" data-category="fruit"><img class=""
+            src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+            alt="Illustrative ice cream dessert for Berry Daydream" loading="lazy" width="1400" height="1050">
+          <div><span class="product-number">02</span>
+            <h3>Berry Daydream</h3>
+            <p>A bright strawberry swirl for a playful afternoon.</p><strong class="price">Sample price ₹159</strong><a
+              href="menu.html" class="product-link">Explore the menu ↗</a>
+          </div>
+        </article>
+        <article class="premium-product" data-category="classic"><img class=""
+            src="./images/vanilla.jpg"
+            alt="Illustrative ice cream dessert for Vanilla Cloud" loading="lazy" width="1400" height="1050">
+          <div><span class="product-number">03</span>
+            <h3>Vanilla Cloud</h3>
+            <p>Simple, creamy and always a good idea.</p><strong class="price">Sample price ₹129</strong><a
+              href="menu.html" class="product-link">Explore the menu ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="sample-note">Illustrative menu and prices. Photographs represent dessert inspiration.</p>
+    </section>
+    <!-- 3. SHAKES & WAFFLES -->
+    <section id="pairings" class="section tinted">
+      <div class="container premium-pairing">
+        <div class="premium-duo"><img class=""
+            src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+            alt="Milkshake topped with whipped cream" loading="lazy" width="1400" height="1050"><img class=""
+            src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+            alt="Freshly prepared waffle with toppings" loading="lazy" width="1400" height="1050"><span
+            class="duo-label">SIP. BITE. REPEAT.</span></div>
+        <div>
+          <div class="premium-heading"><span class="eyebrow">PERFECT PAIRINGS</span>
+            <h2>Your two favorite things.<br>One sweet moment.</h2>
+            <p>Cold, creamy shakes meet warm, golden waffles. Mix your favorite flavors and make a moment of it.</p>
+          </div>
+          <div class="pairing-row">
+            <h3>Chocolate After Hours</h3><span>Sample ₹299</span>
+            <p>Chocolate shake + a cocoa waffle.</p>
+          </div>
+          <div class="pairing-row">
+            <h3>Berry Weekend</h3><span>Sample ₹319</span>
+            <p>Strawberry shake + a berry-topped waffle.</p>
+          </div><a class="button primary" href="menu.html#milkshakes">Discover the Pairings</a>
+        </div>
+      </div>
+    </section>
+    <!-- 4. SEASONAL FEATURE -->
+    <section id="specials" class="section container">
+      <div class="seasonal-feature"><img class=""
+          src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+          alt="Colorful sundae inspiration" loading="lazy" width="1400" height="1050">
+        <div>
+          <div class="premium-heading"><span class="eyebrow">THE SEASONAL SPOTLIGHT</span>
+            <h2>Meet your sunny-side scoop.</h2>
+            <p>Imagine ripe mango flavor swirled through cool, creamy ice cream, with a bright fruity finish in every
+              spoonful. It’s a refreshing little escape, made for sunny afternoons and moments worth slowing down for.
+            </p>
+            <p>Enjoy it on its own or turn it into a sundae with your favorite crunchy toppings. Seasonal flavors can
+              change, so check with the shop to see what’s currently available.</p>
+          </div><span class="badge">Seasonal menu inspiration</span>
+          <p class="sample-note">Ask about current flavors and availability.</p><a href="specials.html"
+            class="button primary">Explore Seasonal Specials</a>
+        </div>
+      </div>
+    </section>
+    <!-- 5. CELEBRATIONS -->
+    <section id="party" class="section tinted">
+      <div class="container premium-celebration">
+        <div>
+          <div class="premium-heading"><span class="eyebrow">MADE TO SHARE</span>
+            <h2>Make it a celebration<br>worth savoring.</h2>
+            <p>Birthdays, family get-togethers or just because. Bring the people; we’ll inspire the dessert table.</p>
+          </div>
+          <ol class="steps">
+            <li><span>01</span>
+              <div>
+                <h3>Pick your dessert mood</h3>
+                <p>Scoops, shakes, waffles or a little of everything.</p>
+              </div>
+            </li>
+            <li><span>02</span>
+              <div>
+                <h3>Tell us about your plans</h3>
+                <p>Share your date, guest count and dietary needs.</p>
+              </div>
+            </li>
+            <li><span>03</span>
+              <div>
+                <h3>Discuss your party selection</h3>
+                <p>Confirm pricing and arrangements with the shop.</p>
+              </div>
+            </li>
+          </ol><a class="button primary" href="partyorders.html">Plan Your Sweet Celebration</a>
+        </div>
+        <div class="celebration-art"><img class=""
+            src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+            alt="Ice cream cones for a shared dessert moment" loading="lazy" width="1400" height="1050">
+          <div class="celebration-note">Good company.<br><strong>Even better dessert.</strong></div>
+        </div>
+      </div>
+    </section>
+    <!-- 6. STORE EXPERIENCE -->
+    <section id="visit" class="section container">
+      <div class="premium-visit"><img class=""
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+          alt="Illustrative cafe interior, not an actual Frost and Swirl store" loading="lazy" width="1400"
+          height="1050">
+        <div>
+          <div class="premium-heading"><span class="eyebrow">STAY A LITTLE LONGER</span>
+            <h2>Your happy place,<br>one scoop away.</h2>
+            <p>Take a break from the everyday. Bring a friend, find a cozy corner and make room for something sweet.</p>
+          </div>
+          <div class="visit-details">
+            <p><strong>Find us</strong><br>[Street], [City], [Postcode]</p>
+            <p><strong>Sample opening hours</strong><br>Mon–Fri: 11 AM–10 PM<br>Sat–Sun: 10 AM–11 PM</p>
+          </div>
+          <p class="sample-note">Replace sample location and hours with actual shop details.</p><a href="contact.html"
+            class="button primary">Meet Us at the Parlour</a>
+        </div>
+      </div>
+    </section>
+    <!-- 7. FINAL INVITATION -->
+    <section class="final-cta">
+      <div class="container final-grid">
+        <div>
+          <span class="eyebrow">SAVE ROOM FOR JOY</span>
+          <h2>Life’s sweeter<br>with a little swirl.</h2>
+          <p>Your next favorite scoop is waiting to be discovered.</p>
+          <div class="actions">
+            <a href="menu.html" class="button primary">Explore the Menu</a>
+            <a href="partyorders.html" class="button secondary">Plan a Party</a>
+          </div>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+          alt="Colorful ice cream dessert ready to enjoy" loading="lazy" width="1200" height="900">
+      </div>
+    </section>
+  </main>
+  <!-- REFERENCE-STYLE FOOTER -->
+  <footer class="reference-footer">
+    <div class="container footer-grid">
+      <div class="footer-intro">
+        <a class="brand" href="index.html" aria-label="Frost&Swirl home">
+          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M9 32h27l-5 24H14L9 32Z" stroke="currentColor" stroke-width="3" />
+            <path d="M12 29c-6-8 5-13 10-13-4-5 1-9 5-11-1 8 10 10 7 17 7 1 7 7 2 10" stroke="currentColor"
+              stroke-width="3" stroke-linecap="round" />
+            <path d="M40 28h17l-3 28H43l-3-28Z M49 27l3-16h8 M39 34h19" stroke="#087F83" stroke-width="3"
+              stroke-linecap="round" />
+          </svg>
+          <span>
+            Frost<span class="teal">&amp;Swirl</span>
+            <small>Scoops of Joy. Swirls of Happiness.</small>
+          </span>
+        </a>
+        <p>
+          Handcrafted ice cream, dreamy milkshakes and happy moments.
+          Find your next favorite scoop at Frost&amp;Swirl.
+        </p>
+        <p class="social-note">
+          Follow the sweet moments.
+        </p>
+        <div class="social-links" aria-label="Social media">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9c0-.6.4-1 1-1Z"></path>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noreferrer noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M14 3c.5 2.1 2 3.6 4.3 4.1v3.2c-1.4 0-2.8-.4-4.1-1.2v6.2a5.3 5.3 0 1 1-5.3-5.3c.7 0 1.3.1 1.9.4v3.2a2.2 2.2 0 1 0 1.4 2.1V3h3.8Z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noreferrer noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4l16 16M20 4L4 20"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="specials.html">Specials</a></li>
+          <li><a href="partyorders.html">Party Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Our Menu</h3>
+        <ul>
+          <li><a href="menu.html">Signature Ice Creams</a></li>
+          <li><a href="menu.html#milkshakes">Milkshakes</a></li>
+          <li><a href="specials.html">Sundaes</a></li>
+          <li><a href="menu.html#milkshakes">Waffle Combos</a></li>
+          <li><a href="specials.html">Seasonal Specials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit &amp; Say Hello</h3>
+        <p class="sample-note">Replaceable sample details</p>
+        <ul class="contact-list">
+          <li>
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>
+              [Street], [City]<br>
+              [State], [Postcode]
+            </span>
+          </li>
+          <li>
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <span>[Business phone number]</span>
+          </li>
+          <li>
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <span>hello@frostandswirl.example</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>
+        © <span id="year">2026</span>
+        Frost&amp;Swirl. All rights reserved.
+      </span>
+      <div>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms and Conditions</a>
+        <span>Made with a little sweetness.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- POLICY DEMO NOTICES -->
+  <dialog id="privacy" aria-labelledby="privacy-title">
+    <h2 id="privacy-title">Privacy Policy — Demo Notice</h2>
+    <p>
+      This sample page has no connected enquiry backend.
+      Form entries are processed locally and are not submitted.
+      Theme and layout preferences are stored in your browser.
+      Dessert photos load from Unsplash and the icon script loads
+      from jsDelivr; those providers receive network requests.
+      Replace this notice with your business’s approved privacy
+      policy before launch.
+    </p>
+    <button class="button primary" type="button" data-close>
+      Close
+    </button>
+  </dialog>
+  <dialog id="terms" aria-labelledby="terms-title">
+    <h2 id="terms-title">Terms and Conditions — Demo Notice</h2>
+    <p>
+      This is a fictional demonstration. Menu offerings, prices,
+      contact details, and hours are examples. No order or booking
+      is accepted. Replace this notice with your actual ordering
+      and business terms before launch.
+    </p>
+    <button class="button primary" type="button" data-close>
+      Close
+    </button>
+  </dialog>
+</body>
+
+</html>
